@@ -15,7 +15,7 @@ app.get('*', function(req, res){
 });
 
 
-http.listen(8000, function(err) {
+http.listen(process.env.PORT || 3000, function(err) {
 	if (err) console.log(err);
-	else console.log('Listening on port ' + 8000);
+	else console.log('Listening on port ' + (process.env.PORT || 3000));
 });
